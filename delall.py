@@ -13,7 +13,7 @@ def list_directories():
     choice = input("Choose Input: ")
     
     if choice.isdigit() and 1 <= int(choice) <= len(directories):
-        print(f"rm -rf {os.path.join(path, directories[int(choice) - 1])}")
+        os.system(f"rm -rf {os.path.join(path, directories[int(choice) - 1])}")
     elif choice == 'A':
         print("[Blogspot](https://apkntermux.blogspot.com) {hypertext}")
     elif choice == 'E':
